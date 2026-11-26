@@ -1,0 +1,166 @@
+:root {
+  --bg: #f6f7f9;
+  --fg: #1a1d21;
+  --card: #ffffff;
+  --accent: #2563eb;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+  color-scheme: light;
+}
+
+[data-theme='dark'] {
+  --bg: #12151a;
+  --fg: #e5e7eb;
+  --card: #1c2129;
+  --accent: #60a5fa;
+  --muted: #9ca3af;
+  --border: #2d333d;
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  line-height: 1.6;
+}
+
+header {
+  border-bottom: 1px solid var(--border);
+  background: var(--card);
+}
+
+nav {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: var(--fg);
+  text-decoration: none;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+}
+
+nav a.active {
+  background: var(--accent);
+  color: #fff;
+}
+
+nav button {
+  margin-left: auto;
+}
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+}
+
+button,
+input {
+  font: inherit;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--fg);
+}
+
+button {
+  cursor: pointer;
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+input[type='search'],
+input[type='email'] {
+  width: 100%;
+  max-width: 420px;
+}
+
+a {
+  color: var(--accent);
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-width: 420px;
+}
+
+.stack label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.user-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.user-card {
+  display: flex;
+  gap: 0.75rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.user-card h3 {
+  margin: 0;
+}
+
+.user-card p {
+  margin: 0.25rem 0;
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+
+.avatar-lg {
+  width: 96px;
+  height: 96px;
+}
+
+.role {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 0.1rem 0.5rem;
+  border-radius: 999px;
+  background: var(--border);
+}
+
+.role-admin {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+[data-theme='dark'] .role-admin {
+  background: #78350f;
+  color: #fde68a;
+}
