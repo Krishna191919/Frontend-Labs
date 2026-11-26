@@ -2,8 +2,15 @@ import { createContext, useContext, useEffect, useState } from 'react'
 
 const ThemeContext = createContext(null)
 
+const getInitialTheme = () => {
+  const stored = localStorage.getItem('theme')
+  if (stored === 'light' || stored === 'dark') return stored
+  // Default to the OS preference (prefers-color-scheme) on first visit
+  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+}
+
 export function ThemeProvider({ children }) {
-  const [theme, setTheme] = useState(() => localStorage.getItem('theme') ?? 'light')
+  const [theme, setTheme] = useState(getInitialTheme)
 
   useEffect(() => {
     document.documentElement.dataset.theme = theme
