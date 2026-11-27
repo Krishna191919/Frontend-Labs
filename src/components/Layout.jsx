@@ -21,7 +21,11 @@ export default function Layout() {
           <NavLink to="/" className={linkClass} end>
             Home
           </NavLink>
-          <NavLink to="/users" className={linkClass}>
+          <NavLink
+            to="/users"
+            className={linkClass}
+            onMouseEnter={() => import('../pages/Users.jsx')} // prefetch chunk on hover
+          >
             Users
           </NavLink>
           {user ? (
