@@ -5,16 +5,16 @@ import { Button } from '../components/ui/Button.jsx'
 
 const features = [
   {
-    title: 'React 19 + Router',
-    body: 'Component tree, nested routes, useParams and guarded pages with ProtectedRoute.',
+    title: 'Server state — TanStack Query',
+    body: 'Users come from a REST API: cached, deduped, retried, with background refetch — loading and error states included.',
   },
   {
-    title: 'Context + hooks',
-    body: 'Theme and Auth broadcast via context; useLocalStorage keeps state across reloads.',
+    title: 'Client state — Zustand',
+    body: 'UI choices (grid/list view, search) live in a tiny store; query results are never copied into it.',
   },
   {
-    title: 'Design tokens',
-    body: 'CSS variables recolour the whole UI — one token change updates light and dark mode.',
+    title: 'Mutations + cache updates',
+    body: 'Adding a user writes straight into the cached ["users"] list — the UI updates without a refetch.',
   },
 ]
 
@@ -38,11 +38,11 @@ export default function Home() {
       <div className="flex flex-col items-start gap-6 md:flex-row md:items-center md:justify-between">
         <div>
           <h1 className="text-3xl font-bold leading-tight">
-            Unit 1 · Topic 1.3 — Styling Systems
+            Unit 1 · Topic 1.4 — State Management
           </h1>
           <p className="mt-2 text-muted">
-            Tailwind CSS v4, responsive Grid + Flexbox, and CSS-variable design
-            tokens. Start with the{' '}
+            TanStack Query for server state, Zustand for UI state, and cache
+            updates after mutations. Start with the{' '}
             <Link
               to="/users"
               className="text-primary underline focus-visible:outline-2 focus-visible:outline-primary"

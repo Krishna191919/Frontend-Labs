@@ -1,4 +1,17 @@
-# React + Vite
+# frontend-lab
+
+ITEX 320 — Unit 1 frontend lab. Current branch: **assignment-1.4 — State Management**.
+
+```bash
+npm install
+npm run dev
+```
+
+- Server state: TanStack Query (`src/api/users.js`, `src/hooks/useUsers.js`)
+- Client/UI state: Zustand (`src/store/ui.js`) — grid/list view + search
+- Mutations: `useCreateUser` updates the cached `['users']` list
+
+## Vite template
 
 This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 
